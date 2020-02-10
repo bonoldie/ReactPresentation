@@ -4,6 +4,8 @@
   "description": "EnricoBonoldi & Giacomo Tezza Presentation",
   "main": "./src/index.js",
   "scripts": {
+    "start": "webpack-dev-server",
+    "dev": "webpack-dev-server --env.dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,32 @@
   "bugs": {
     "url": "https://github.com/Bonoldiz/ReactPresentation/issues"
   },
-  "homepage": "https://github.com/Bonoldiz/ReactPresentation#readme"
+  "homepage": "https://github.com/Bonoldiz/ReactPresentation#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.0.4",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mdbootstrap": "^4.12.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.2"
+  }
 }
