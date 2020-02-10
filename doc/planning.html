@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Table Of Content</title>
-        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
-        
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
         <style>
 .task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
 </style>
@@ -18,7 +18,7 @@
             }
         </style>
         
-        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
     </head>
     <body class="vscode-light">
         <!--<link rel="stylesheet" href="bootstrap.min.css">-->
@@ -37,7 +37,7 @@
     color: #DCDCDC;
 }
 
-div.babelTable + table td, th {
+div.babelTable + table td {
     border: 0px !important;
 } 
 
@@ -45,63 +45,30 @@ div.babelTable + table td, th {
 <h2 id="table-of-content">Table Of Content</h2>
 <ul>
 <li><a href="#table-of-content">Table Of Content</a></li>
-<li><a href="#topics">Topics</a></li>
-<li><a href="#slide-1">Slide 1</a>
+<li><a href="#topics">Topics</a>
 <ul>
-<li><a href="#reactjs---jsx---babel---webpack">ReactJs - JSX - Babel - WebPack</a>
-<ul>
-<li><a href="#the-four-horsemen-of-apocalypse">The Four Horsemen of Apocalypse</a>
-<ul>
-<li><a href="#bonoldi-enrico---tezza-giacomo">Bonoldi Enrico - Tezza Giacomo</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#slide-2">Slide 2</a>
-<ul>
-<li><a href="#reactjs---introduction">ReactJs - Introduction</a></li>
-</ul>
-</li>
-<li><a href="#slide-3">Slide 3</a>
-<ul>
-<li><a href="#reactjs---structure">ReactJs - Structure</a>
+<li><a href="#reactjs---introduction">ReactJS - Introduction</a></li>
+<li><a href="#structure">Structure</a>
 <ul>
 <li><a href="#dom">DOM</a></li>
 <li><a href="#vdom">VDOM</a></li>
 </ul>
 </li>
+<li><a href="#component">Component</a></li>
+<li><a href="#lifecycle">LifeCycle</a>
+<ul>
+<li><a href="#lifecycle---old-classy-style">LifeCycle - Old Classy Style</a></li>
+<li><a href="#lifecycle---new-react-v16-whooks">LifeCycle - New React v16+ w/Hooks</a></li>
 </ul>
 </li>
-<li><a href="#slide-4">Slide 4</a>
-<ul>
-<li><a href="#reactjs---component">ReactJs - Component</a></li>
-</ul>
-</li>
-<li><a href="#slide-5">Slide 5</a>
-<ul>
-<li><a href="#reactjs---lifecycle">ReactJs - LifeCycle</a></li>
-</ul>
-</li>
-<li><a href="#slide-6">Slide 6</a>
-<ul>
-<li><a href="#reactjs---lifecycle---old-classy-style">ReactJs - LifeCycle - Old Classy Style</a></li>
-</ul>
-</li>
-<li><a href="#slide-7">Slide 7</a>
-<ul>
-<li><a href="#reactjs---lifecycle---new-react-v16-whooks">ReactJs - LifeCycle - New React v16+ w/Hooks</a></li>
-</ul>
-</li>
-<li><a href="#slide-8">Slide 8</a>
-<ul>
 <li><a href="#jsx">JSX</a></li>
+<li><a href="#babel">Babel</a></li>
+<li><a href="#webpack">Webpack</a>
+<ul>
+<li><a href="#webpack---introduction">Webpack - Introduction</a></li>
+<li><a href="#setup">Setup</a></li>
 </ul>
 </li>
-<li><a href="#slide-9">Slide 9</a>
-<ul>
-<li><a href="#babel">Babel</a></li>
 </ul>
 </li>
 </ul>
@@ -130,21 +97,28 @@ div.babelTable + table td, th {
 </li>
 <li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> JSX</li>
 <li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Babel</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> WebPack
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Webpack
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Introduction</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Setup</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Configs</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Examples
 <br>
 <br>
 <br></li>
 </ul>
+</li>
+</ul>
 <hr>
-<h2 id="slide-1">Slide 1</h2>
-<h3 id="reactjs---jsx---babel---webpack">ReactJs - JSX - Babel - WebPack</h3>
-<h4 id="the-four-horsemen-of-apocalypse">The Four Horsemen of Apocalypse</h4>
-<h5 id="bonoldi-enrico---tezza-giacomo">Bonoldi Enrico - Tezza Giacomo</h5>
+<h2 id="slide-1----omit-in-toc">Slide 1 <!-- omit in toc --></h2>
+<h3 id="jsx---babel---webpack----omit-in-toc">JSX - Babel - WebPack <!-- omit in toc --></h3>
+<h4 id="the-four-horsemen-of-apocalypse----omit-in-toc">The Four Horsemen of Apocalypse <!-- omit in toc --></h4>
+<h5 id="bonoldi-enrico---tezza-giacomo----omit-in-toc">Bonoldi Enrico - Tezza Giacomo <!-- omit in toc --></h5>
 <br>
 <br>
 <hr>
-<h2 id="slide-2">Slide 2</h2>
-<h3 id="reactjs---introduction">ReactJs - Introduction</h3>
+<h2 id="slide-2----omit-in-toc">Slide 2 <!-- omit in toc --></h2>
+<h3 id="reactjs---introduction">ReactJS - Introduction</h3>
 <table>
 <thead>
 <tr>
@@ -174,8 +148,8 @@ div.babelTable + table td, th {
 <br>
 <br>
 <hr>
-<h2 id="slide-3">Slide 3</h2>
-<h3 id="reactjs---structure">ReactJs - Structure</h3>
+<h2 id="slide-3----omit-in-toc">Slide 3 <!-- omit in toc --></h2>
+<h3 id="structure">Structure</h3>
 <h4 id="dom">DOM</h4>
 <blockquote>
 <p>The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an XML or HTML document as a tree structure wherein each node is an object representing a part of the document.</p>
@@ -188,8 +162,8 @@ div.babelTable + table td, th {
 <br>
 <br>
 <hr>
-<h2 id="slide-4">Slide 4</h2>
-<h3 id="reactjs---component">ReactJs - <a href="https://en.reactjs.org/docs/components-and-props.html">Component</a></h3>
+<h2 id="slide-4----omit-in-toc">Slide 4 <!-- omit in toc --></h2>
+<h3 id="component"><a href="https://en.reactjs.org/docs/components-and-props.html">Component</a></h3>
 <blockquote>
 <p>Split the UI into independent, reusable pieces, and think about each piece in isolation.</p>
 </blockquote>
@@ -199,8 +173,8 @@ div.babelTable + table td, th {
 </div></code></pre>
 <p>Each component is standalone and has its own lifecycle</p>
 <hr>
-<h2 id="slide-5">Slide 5</h2>
-<h3 id="reactjs---lifecycle">ReactJs - <a href="https://en.reactjs.org/docs/state-and-lifecycle.html">LifeCycle</a></h3>
+<h2 id="slide-5----omit-in-toc">Slide 5 <!-- omit in toc --></h2>
+<h3 id="lifecycle"><a href="https://en.reactjs.org/docs/state-and-lifecycle.html">LifeCycle</a></h3>
 <p>A component’s lifecycle can be broken down into four parts:</p>
 <ul>
 <li>Initialization</li>
@@ -208,8 +182,8 @@ div.babelTable + table td, th {
 <li>Updating</li>
 <li>Unmounting</li>
 </ul>
-<h2 id="slide-6">Slide 6</h2>
-<h4 id="reactjs---lifecycle---old-classy-style">ReactJs - LifeCycle - <a href="https://reactjs.org/docs/components-and-props.html">Old Classy Style</a></h4>
+<h2 id="slide-6----omit-in-toc">Slide 6 <!-- omit in toc --></h2>
+<h4 id="lifecycle---old-classy-style">LifeCycle - <a href="https://reactjs.org/docs/components-and-props.html">Old Classy Style</a></h4>
 <pre><code class="language-js"><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
   <span class="hljs-comment">/* INITIALIZATION */</span>
   <span class="hljs-keyword">constructor</span>(props){...}
@@ -227,8 +201,8 @@ div.babelTable + table td, th {
   componentWillUnmount(){...}
 }
 </div></code></pre>
-<h2 id="slide-7">Slide 7</h2>
-<h4 id="reactjs---lifecycle---new-react-v16-whooks">ReactJs - LifeCycle - New React v16+ w/<a href="https://reactjs.org/docs/hooks-intro.html">Hooks</a></h4>
+<h2 id="slide-7----omit-in-toc">Slide 7 <!-- omit in toc --></h2>
+<h4 id="lifecycle---new-react-v16-whooks">LifeCycle - New React v16+ w/<a href="https://reactjs.org/docs/hooks-intro.html">Hooks</a></h4>
 <pre><code class="language-js"><div><span class="hljs-comment">/* the Initialization is the method itself */</span>
 <span class="hljs-keyword">const</span> MyComponent = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
 
@@ -246,7 +220,7 @@ div.babelTable + table td, th {
   <span class="hljs-keyword">return</span>( <span class="hljs-comment">/* JSX */</span>)
 }
 </div></code></pre>
-<h2 id="slide-8">Slide 8</h2>
+<h2 id="slide-8----omit-in-toc">Slide 8 <!-- omit in toc --></h2>
 <h3 id="jsx"><a href="https://reactjs.org/docs/jsx-in-depth.html">JSX</a></h3>
 <blockquote>
 <p>JSX is a <strong>syntax extension</strong> to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called “React elements”.<br>
@@ -254,6 +228,42 @@ div.babelTable + table td, th {
 </blockquote>
 <blockquote>
 <p>Uses camelCase property naming convention instead of HTML attribute names.</p>
+</blockquote>
+<div class="babelTable"></div>
+<table>
+<thead>
+<tr>
+<th>JSX Code</th>
+<th>React compile into...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;MyButton color=&quot;blue&quot; shadowSize={2}&gt;</code></td>
+<td><code>React.createElement(</code></td>
+</tr>
+<tr>
+<td>   <code>Click Me</code></td>
+<td>   <code>MyButton,</code></td>
+</tr>
+<tr>
+<td><code>&lt;/MyButton&gt;</code></td>
+<td>   <code>{color: 'blue', shadowSize: 2},</code></td>
+</tr>
+<tr>
+<td></td>
+<td>   <code>'Click Me'</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="slide-9----omit-in-toc">Slide 9 <!-- omit in toc --></h2>
+<h3 id="babel"><a href="https://babeljs.io/docs/en/#babel-is-a-javascript-compiler">Babel</a></h3>
+<blockquote>
+<p>Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.</p>
 </blockquote>
 <pre><code class="language-json"><div>/* COMMON BABEL CONFIG FILE */
 /* Saved in .babelrc or babel.config.json */
@@ -264,11 +274,6 @@ div.babelTable + table td, th {
   ]
 }
 </div></code></pre>
-<h2 id="slide-9">Slide 9</h2>
-<h3 id="babel"><a href="https://babeljs.io/docs/en/#babel-is-a-javascript-compiler">Babel</a></h3>
-<blockquote>
-<p>Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.</p>
-</blockquote>
 <p>Here are the main things Babel can do for you:</p>
 <ul>
 <li><strong>Transform syntax</strong></li>
@@ -298,6 +303,60 @@ div.babelTable + table td, th {
 </tr>
 </tbody>
 </table>
+<h2 id="slide-10----omit-in-toc">Slide 10 <!-- omit in toc --></h2>
+<h3 id="webpack"><a href="https://webpack.js.org/">Webpack</a></h3>
+<h4 id="webpack---introduction">Webpack - Introduction</h4>
+<blockquote>
+<p>At its core, webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles.</p>
+</blockquote>
+<p><img src="file:////home/ebonoldi/Projects/ReactPresentation/doc/assets/webpack.png" alt="webpack.png"></p>
+<h4 id="setup">Setup</h4>
+<p>Webpack runs on node and it can be installed via npm</p>
+<pre><code class="language-bash"><div>npm install --save webpack /* webpack-cli webpack-dev-server */
+</div></code></pre>
+<pre><code class="language-js"><div><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>)
+<span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">'webpack'</span>)
+<span class="hljs-keyword">const</span> htmlPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">'html-webpack-plugin'</span>)
+
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-params">env</span> =&gt;</span> {
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">entry</span>: <span class="hljs-string">'./src/index.js'</span>,
+        <span class="hljs-attr">output</span>: {
+            <span class="hljs-attr">path</span>: path.resolve(__dirname, <span class="hljs-string">'dist'</span>),
+            <span class="hljs-attr">filename</span>: <span class="hljs-string">'bundle.js'</span>,
+            <span class="hljs-attr">publicPath</span>: <span class="hljs-string">'/'</span>
+        },
+        <span class="hljs-attr">devServer</span>: {
+            <span class="hljs-attr">historyApiFallback</span>: <span class="hljs-literal">true</span>,
+          },
+        <span class="hljs-attr">module</span>: {
+            <span class="hljs-attr">rules</span>: [
+                { <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(js)|.(jsx)$/</span>, <span class="hljs-attr">use</span>: <span class="hljs-string">'babel-loader'</span> },
+                { <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.css$/</span>, <span class="hljs-attr">use</span>: [<span class="hljs-string">'style-loader'</span>, <span class="hljs-string">'css-loader'</span>] },
+                { <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.s[ac]ss$/i</span>, <span class="hljs-attr">use</span>: [<span class="hljs-string">'style-loader'</span>, <span class="hljs-string">'css-loader'</span>, <span class="hljs-string">'sass-loader'</span>,] },
+                {
+                    <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(woff(2)?|ttf|eot|svg|png)(\?v=\d+\.\d+\.\d+)?$/</span>,
+                    <span class="hljs-attr">use</span>: [{
+                        <span class="hljs-attr">loader</span>: <span class="hljs-string">'file-loader'</span>,
+                        <span class="hljs-attr">options</span>: {
+                            <span class="hljs-attr">outputPath</span>: <span class="hljs-string">'./public/fonts'</span>
+                        }
+                    }]
+                }
+            ]
+        },
+        <span class="hljs-attr">mode</span>: (env &amp;&amp; env.dev) ? <span class="hljs-string">"development"</span> : <span class="hljs-string">"production"</span>,
+        <span class="hljs-attr">plugins</span>: [
+            <span class="hljs-keyword">new</span> htmlPlugin({
+                <span class="hljs-attr">template</span>: <span class="hljs-string">'./src/index.html'</span>
+            })
+        ],
+        <span class="hljs-attr">watch</span>: <span class="hljs-literal">true</span>
+    }
+}
+
+</div></code></pre>
 
     </body>
     </html>

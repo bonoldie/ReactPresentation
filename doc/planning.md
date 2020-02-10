@@ -24,28 +24,19 @@ div.babelTable + table td {
 ## Table Of Content
 - [Table Of Content](#table-of-content)
 - [Topics](#topics)
-- [Slide 1](#slide-1)
-  - [ReactJs - JSX - Babel - WebPack](#reactjs---jsx---babel---webpack)
-    - [The Four Horsemen of Apocalypse](#the-four-horsemen-of-apocalypse)
-      - [Bonoldi Enrico - Tezza Giacomo](#bonoldi-enrico---tezza-giacomo)
-- [Slide 2](#slide-2)
-  - [ReactJs - Introduction](#reactjs---introduction)
-- [Slide 3](#slide-3)
-  - [ReactJs - Structure](#reactjs---structure)
+  - [ReactJS - Introduction](#reactjs---introduction)
+  - [Structure](#structure)
     - [DOM](#dom)
     - [VDOM](#vdom)
-- [Slide 4](#slide-4)
-  - [ReactJs - Component](#reactjs---component)
-- [Slide 5](#slide-5)
-  - [ReactJs - LifeCycle](#reactjs---lifecycle)
-- [Slide 6](#slide-6)
-    - [ReactJs - LifeCycle - Old Classy Style](#reactjs---lifecycle---old-classy-style)
-- [Slide 7](#slide-7)
-    - [ReactJs - LifeCycle - New React v16+ w/Hooks](#reactjs---lifecycle---new-react-v16-whooks)
-- [Slide 8](#slide-8)
+  - [Component](#component)
+  - [LifeCycle](#lifecycle)
+    - [LifeCycle - Old Classy Style](#lifecycle---old-classy-style)
+    - [LifeCycle - New React v16+ w/Hooks](#lifecycle---new-react-v16-whooks)
   - [JSX](#jsx)
-- [Slide 9](#slide-9)
   - [Babel](#babel)
+  - [Webpack](#webpack)
+    - [Webpack - Introduction](#webpack---introduction)
+    - [Setup](#setup)
 
 <br>
 <br>
@@ -64,29 +55,31 @@ div.babelTable + table td {
     - [x] New Method
 - [x] JSX
 - [x] Babel
-- [ ] WebPack
+- [x] Webpack
+  - [x] Introduction
+  - [x] Setup
 <br>
 <br>
 <br>
 
 ---
 
-## Slide 1
+## Slide 1 <!-- omit in toc -->
 
-### ReactJs - JSX - Babel - WebPack
+### JSX - Babel - WebPack <!-- omit in toc -->
 
-#### The Four Horsemen of Apocalypse
+#### The Four Horsemen of Apocalypse <!-- omit in toc -->
 
-##### Bonoldi Enrico - Tezza Giacomo
+##### Bonoldi Enrico - Tezza Giacomo <!-- omit in toc -->
 
 <br>
 <br>
 
 ---
 
-## Slide 2
+## Slide 2 <!-- omit in toc -->
 
-### ReactJs - Introduction
+### ReactJS - Introduction
 
 |         React is          |    React isn't    |
 | :-----------------------: | :---------------: |
@@ -99,9 +92,9 @@ div.babelTable + table td {
 
 ---
 
-## Slide 3
+## Slide 3 <!-- omit in toc -->
 
-### ReactJs - Structure
+### Structure
 
 #### DOM
 
@@ -118,9 +111,9 @@ div.babelTable + table td {
 
 ---
 
-## Slide 4
+## Slide 4 <!-- omit in toc -->
 
-### ReactJs - [Component](https://en.reactjs.org/docs/components-and-props.html)
+### [Component](https://en.reactjs.org/docs/components-and-props.html)
 
 > Split the UI into independent, reusable pieces, and think about each piece in isolation.
 
@@ -134,9 +127,9 @@ Each component is standalone and has its own lifecycle
 
 ---
 
-## Slide 5
+## Slide 5 <!-- omit in toc -->
 
-### ReactJs - [LifeCycle](https://en.reactjs.org/docs/state-and-lifecycle.html)
+### [LifeCycle](https://en.reactjs.org/docs/state-and-lifecycle.html)
 
 A component’s lifecycle can be broken down into four parts:
 
@@ -146,9 +139,9 @@ A component’s lifecycle can be broken down into four parts:
 - Unmounting
 
 
-## Slide 6
+## Slide 6 <!-- omit in toc -->
 
-#### ReactJs - LifeCycle - [Old Classy Style](https://reactjs.org/docs/components-and-props.html)
+#### LifeCycle - [Old Classy Style](https://reactjs.org/docs/components-and-props.html)
 
 ```js
 class MyComponent extends React.Component {
@@ -169,9 +162,9 @@ class MyComponent extends React.Component {
 }
 ```
 
-## Slide 7
+## Slide 7 <!-- omit in toc -->
 
-#### ReactJs - LifeCycle - New React v16+ w/[Hooks](https://reactjs.org/docs/hooks-intro.html)
+#### LifeCycle - New React v16+ w/[Hooks](https://reactjs.org/docs/hooks-intro.html)
 
 ```js
 /* the Initialization is the method itself */
@@ -192,7 +185,7 @@ const MyComponent = () => {
 }
 ```
 
-## Slide 8
+## Slide 8 <!-- omit in toc -->
 
 ### [JSX](https://reactjs.org/docs/jsx-in-depth.html)
 
@@ -200,6 +193,22 @@ const MyComponent = () => {
 *Its used in both Class or functional component.*
 
 > Uses camelCase property naming convention instead of HTML attribute names.
+
+<div class="babelTable"></div>
+
+| JSX Code                                 | React compile into...                               |
+| ---------------------------------------- | --------------------------------------------------- |
+| `<MyButton color="blue" shadowSize={2}>` | `React.createElement(`                              |
+| &nbsp;&nbsp;&nbsp;`Click Me`             | &nbsp;&nbsp;&nbsp;`MyButton,`                       |
+| `</MyButton>`                            | &nbsp;&nbsp;&nbsp;`{color: 'blue', shadowSize: 2},` |
+|                                          | &nbsp;&nbsp;&nbsp;`'Click Me'`                      |
+|                                          | `)`                                                 |
+
+## Slide 9 <!-- omit in toc -->
+
+### [Babel](https://babeljs.io/docs/en/#babel-is-a-javascript-compiler)
+
+>   Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. 
 
 ```json
 /* COMMON BABEL CONFIG FILE */
@@ -212,12 +221,6 @@ const MyComponent = () => {
 }
 ```
 
-## Slide 9
-
-### [Babel](https://babeljs.io/docs/en/#babel-is-a-javascript-compiler)
-
->   Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. 
-
 Here are the main things Babel can do for you:
 - **Transform syntax**
 - *Polyfill features that are missing in your target environment (through @babel/polyfill)*
@@ -225,10 +228,84 @@ Here are the main things Babel can do for you:
 
 <div class="babelTable"></div>
 
-| Source Code |  Babel transformation |
-| - | - |
-| `[1, 2, 3].map((n) => n + 1);` | `[1, 2, 3].map(function(n) {` |
-|  | &nbsp;&nbsp;&nbsp; `return n + 1;` |
-|  | `});` |
+| Source Code                    | Babel transformation               |
+| ------------------------------ | ---------------------------------- |
+| `[1, 2, 3].map((n) => n + 1);` | `[1, 2, 3].map(function(n) {`      |
+|                                | &nbsp;&nbsp;&nbsp; `return n + 1;` |
+|                                | `});`                              |
+
+## Slide 10 <!-- omit in toc -->
+
+### [Webpack](https://webpack.js.org/)
+
+#### Webpack - Introduction
+
+> At its core, webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles.
+
+![webpack.png](assets/webpack.png)
+
+
+#### Setup
+
+Webpack runs on node and it can be installed via npm
+
+```bash  
+npm install --save webpack /* webpack-cli webpack-dev-server */
+```
+
+```js
+/* MY CURRENT CONFIGURATION (webpack.config.js)*/
+
+const path = require('path')
+const webpack = require('webpack')
+const htmlPlugin = require('html-webpack-plugin')
+
+module.exports = env => {
+    return {
+        entry: './src/index.js',
+        output: {
+            path: path.resolve(__dirname, 'dist'),
+            filename: 'bundle.js',
+            publicPath: '/'
+        },
+        devServer: {
+            historyApiFallback: true,
+          },
+        /*
+          THIS IS VERY IMPORTANT 
+
+          Here the files that match the regex are loaded with the related loader
+        */
+
+        module: {
+            rules: [
+                { test: /\.(js)|.(jsx)$/, use: 'babel-loader' },
+                { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+                { test: /\.s[ac]ss$/i, use: ['style-loader', 'css-loader', 'sass-loader',] },
+                {
+                    test: /\.(woff(2)?|ttf|eot|svg|png)(\?v=\d+\.\d+\.\d+)?$/,
+                    use: [{
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: './public/fonts'
+                        }
+                    }]
+                }
+            ]
+        },
+        /* THE BUILD ENV */
+        mode: (env && env.dev) ? "development" : "production",
+        /* SOME PLUGINS FOR OUR APP */
+        plugins: [
+            new htmlPlugin({
+                template: './src/index.html'
+            })
+        ],
+        /* HMR */
+        watch: true
+    }
+}
+
+```
 
 
