@@ -1,0 +1,19 @@
+{
+  "name": "react-presentation",
+  "version": "1.0.0",
+  "description": "EnricoBonoldi & Giacomo Tezza Presentation",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bonoldiz/ReactPresentation.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bonoldiz/ReactPresentation/issues"
+  },
+  "homepage": "https://github.com/Bonoldiz/ReactPresentation#readme"
+}
