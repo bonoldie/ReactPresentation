@@ -1,10 +1,12 @@
 const path = require('path')
-const webpack = require('webpack')
 const htmlPlugin = require('html-webpack-plugin')
-
 
 module.exports = env => {
     return {
+        // IGNORING NODE MODULES AND NATIVE CODE
+        target: 'web',
+
+        // CONFIGS
         entry: './src/index.js',
         output: {
             path: path.resolve(__dirname, 'dist'),
@@ -13,12 +15,14 @@ module.exports = env => {
         },
         devServer: {
             historyApiFallback: true,
-          },
+        },
         module: {
             rules: [
+                //{ test: /\.(png|jpe?g|gif)$/i, use: 'file-loader'},
+                { test: /\.(md)/, use: "raw-loader" },
                 { test: /\.(js)|.(jsx)$/, use: 'babel-loader' },
                 { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-                { test: /\.s[ac]ss$/i, use: ['style-loader', 'css-loader', 'sass-loader',] },
+                { test: /\.s[ac]ss$/, use: ['style-loader', 'css-loader', 'sass-loader',] },
                 {
                     test: /\.(woff(2)?|ttf|eot|svg|png)(\?v=\d+\.\d+\.\d+)?$/,
                     use: [{

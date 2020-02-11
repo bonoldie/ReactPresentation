@@ -1,7 +1,10 @@
 <!--<link rel="stylesheet" href="bootstrap.min.css">-->
-<link rel="stylesheet" href="../node_modules/markdown-retro/css/retro.css">
+
+
+<link rel="stylesheet" href="../node_modules/markdown-retro/css/retro.css"> 
 
 <style>
+
 
 .vscode-light pre {
     background-color: rgba(220, 220, 220, 0.05) !important;
@@ -18,8 +21,9 @@
 div.babelTable + table td {
     border: 0px !important;
 } 
-
 </style>
+
+Slide 
 
 ## Table Of Content
 - [Table Of Content](#table-of-content)
@@ -62,7 +66,7 @@ div.babelTable + table td {
 <br>
 <br>
 
----
+--- 
 
 ## Slide 1 <!-- omit in toc -->
 
