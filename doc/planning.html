@@ -21,9 +21,12 @@
         <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
     </head>
     <body class="vscode-light">
-        <!--<link rel="stylesheet" href="bootstrap.min.css">-->
+        <!-- START HEADER -->
 <link rel="stylesheet" href="../node_modules/markdown-retro/css/retro.css">
+<!--<link rel="stylesheet" href="../node_modules/highlight.js/styles/agate.css">-->
+<script src="../node_modules/highlight.js/lib/index.js"></script>
 <style>
+
 
 .vscode-light pre {
     background-color: rgba(220, 220, 220, 0.05) !important;
@@ -40,8 +43,9 @@
 div.babelTable + table td {
     border: 0px !important;
 } 
-
 </style>
+<!-- END HEADER -->
+<!-- START SLIDE 1 -->
 <h2 id="table-of-content">Table Of Content</h2>
 <ul>
 <li><a href="#table-of-content">Table Of Content</a></li>
@@ -74,6 +78,7 @@ div.babelTable + table td {
 </ul>
 <br>
 <br>
+<!-- END SLIDE 1 -->
 <h2 id="topics">Topics</h2>
 <ul class="contains-task-list">
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> ReactJs
@@ -97,12 +102,10 @@ div.babelTable + table td {
 </li>
 <li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> JSX</li>
 <li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Babel</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Webpack
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Webpack
 <ul class="contains-task-list">
 <li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Introduction</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Setup</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Configs</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Examples
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Setup
 <br>
 <br>
 <br></li>
@@ -110,14 +113,15 @@ div.babelTable + table td {
 </li>
 </ul>
 <hr>
-<h2 id="slide-1----omit-in-toc">Slide 1 <!-- omit in toc --></h2>
+<!-- START SLIDE 2 -->
 <h3 id="jsx---babel---webpack----omit-in-toc">JSX - Babel - WebPack <!-- omit in toc --></h3>
 <h4 id="the-four-horsemen-of-apocalypse----omit-in-toc">The Four Horsemen of Apocalypse <!-- omit in toc --></h4>
 <h5 id="bonoldi-enrico---tezza-giacomo----omit-in-toc">Bonoldi Enrico - Tezza Giacomo <!-- omit in toc --></h5>
 <br>
 <br>
+<!-- END SLIDE 2 -->
 <hr>
-<h2 id="slide-2----omit-in-toc">Slide 2 <!-- omit in toc --></h2>
+<!-- START SLIDE 3 -->
 <h3 id="reactjs---introduction">ReactJS - Introduction</h3>
 <table>
 <thead>
@@ -147,8 +151,9 @@ div.babelTable + table td {
 </table>
 <br>
 <br>
+<!-- END SLIDE 3 -->
 <hr>
-<h2 id="slide-3----omit-in-toc">Slide 3 <!-- omit in toc --></h2>
+<!-- START SLIDE 4 -->
 <h3 id="structure">Structure</h3>
 <h4 id="dom">DOM</h4>
 <blockquote>
@@ -161,8 +166,9 @@ div.babelTable + table td {
 </blockquote>
 <br>
 <br>
+<!-- END SLIDE 4 -->
 <hr>
-<h2 id="slide-4----omit-in-toc">Slide 4 <!-- omit in toc --></h2>
+<!-- START SLIDE 5 -->
 <h3 id="component"><a href="https://en.reactjs.org/docs/components-and-props.html">Component</a></h3>
 <blockquote>
 <p>Split the UI into independent, reusable pieces, and think about each piece in isolation.</p>
@@ -172,8 +178,9 @@ div.babelTable + table td {
 }
 </div></code></pre>
 <p>Each component is standalone and has its own lifecycle</p>
+<!-- END SLIDE 5 -->
 <hr>
-<h2 id="slide-5----omit-in-toc">Slide 5 <!-- omit in toc --></h2>
+<!-- START SLIDE 6 -->
 <h3 id="lifecycle"><a href="https://en.reactjs.org/docs/state-and-lifecycle.html">LifeCycle</a></h3>
 <p>A component’s lifecycle can be broken down into four parts:</p>
 <ul>
@@ -182,7 +189,8 @@ div.babelTable + table td {
 <li>Updating</li>
 <li>Unmounting</li>
 </ul>
-<h2 id="slide-6----omit-in-toc">Slide 6 <!-- omit in toc --></h2>
+<!-- END SLIDE 6 -->
+<!-- START SLIDE 7 -->
 <h4 id="lifecycle---old-classy-style">LifeCycle - <a href="https://reactjs.org/docs/components-and-props.html">Old Classy Style</a></h4>
 <pre><code class="language-js"><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
   <span class="hljs-comment">/* INITIALIZATION */</span>
@@ -201,7 +209,8 @@ div.babelTable + table td {
   componentWillUnmount(){...}
 }
 </div></code></pre>
-<h2 id="slide-7----omit-in-toc">Slide 7 <!-- omit in toc --></h2>
+<!-- END SLIDE 7 -->
+<!-- START SLIDE 8 -->
 <h4 id="lifecycle---new-react-v16-whooks">LifeCycle - New React v16+ w/<a href="https://reactjs.org/docs/hooks-intro.html">Hooks</a></h4>
 <pre><code class="language-js"><div><span class="hljs-comment">/* the Initialization is the method itself */</span>
 <span class="hljs-keyword">const</span> MyComponent = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
@@ -220,7 +229,8 @@ div.babelTable + table td {
   <span class="hljs-keyword">return</span>( <span class="hljs-comment">/* JSX */</span>)
 }
 </div></code></pre>
-<h2 id="slide-8----omit-in-toc">Slide 8 <!-- omit in toc --></h2>
+<!-- END SLIDE 8 -->
+<!-- START SLIDE 9 -->
 <h3 id="jsx"><a href="https://reactjs.org/docs/jsx-in-depth.html">JSX</a></h3>
 <blockquote>
 <p>JSX is a <strong>syntax extension</strong> to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called “React elements”.<br>
@@ -260,7 +270,8 @@ div.babelTable + table td {
 </tr>
 </tbody>
 </table>
-<h2 id="slide-9----omit-in-toc">Slide 9 <!-- omit in toc --></h2>
+<!-- END SLIDE 9 -->
+<!-- START SLIDE 10 -->
 <h3 id="babel"><a href="https://babeljs.io/docs/en/#babel-is-a-javascript-compiler">Babel</a></h3>
 <blockquote>
 <p>Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.</p>
@@ -303,7 +314,8 @@ div.babelTable + table td {
 </tr>
 </tbody>
 </table>
-<h2 id="slide-10----omit-in-toc">Slide 10 <!-- omit in toc --></h2>
+<!-- END SLIDE 10 -->
+<!-- START SLIDE 11 -->
 <h3 id="webpack"><a href="https://webpack.js.org/">Webpack</a></h3>
 <h4 id="webpack---introduction">Webpack - Introduction</h4>
 <blockquote>
@@ -314,10 +326,11 @@ div.babelTable + table td {
 <p>Webpack runs on node and it can be installed via npm</p>
 <pre><code class="language-bash"><div>npm install --save webpack /* webpack-cli webpack-dev-server */
 </div></code></pre>
-<pre><code class="language-js"><div><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>)
+<pre><code class="language-js"><div><span class="hljs-comment">/* MY CURRENT CONFIGURATION (webpack.config.js)*/</span>
+
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>)
 <span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">'webpack'</span>)
 <span class="hljs-keyword">const</span> htmlPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">'html-webpack-plugin'</span>)
-
 
 <span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-params">env</span> =&gt;</span> {
     <span class="hljs-keyword">return</span> {
@@ -330,7 +343,13 @@ div.babelTable + table td {
         <span class="hljs-attr">devServer</span>: {
             <span class="hljs-attr">historyApiFallback</span>: <span class="hljs-literal">true</span>,
           },
-        <span class="hljs-attr">module</span>: {
+        <span class="hljs-comment">/*
+          THIS IS VERY IMPORTANT 
+
+          Here the files that match the regex are loaded with the related loader
+        */</span>
+
+        <span class="hljs-built_in">module</span>: {
             <span class="hljs-attr">rules</span>: [
                 { <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(js)|.(jsx)$/</span>, <span class="hljs-attr">use</span>: <span class="hljs-string">'babel-loader'</span> },
                 { <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.css$/</span>, <span class="hljs-attr">use</span>: [<span class="hljs-string">'style-loader'</span>, <span class="hljs-string">'css-loader'</span>] },
@@ -346,17 +365,23 @@ div.babelTable + table td {
                 }
             ]
         },
-        <span class="hljs-attr">mode</span>: (env &amp;&amp; env.dev) ? <span class="hljs-string">"development"</span> : <span class="hljs-string">"production"</span>,
-        <span class="hljs-attr">plugins</span>: [
+        <span class="hljs-comment">/* THE BUILD ENV */</span>
+        mode: (env &amp;&amp; env.dev) ? <span class="hljs-string">"development"</span> : <span class="hljs-string">"production"</span>,
+        <span class="hljs-comment">/* SOME PLUGINS FOR OUR APP */</span>
+        plugins: [
             <span class="hljs-keyword">new</span> htmlPlugin({
                 <span class="hljs-attr">template</span>: <span class="hljs-string">'./src/index.html'</span>
             })
         ],
-        <span class="hljs-attr">watch</span>: <span class="hljs-literal">true</span>
+        <span class="hljs-comment">/* HMR */</span>
+        watch: <span class="hljs-literal">true</span>
     }
 }
 
 </div></code></pre>
-
+<!-- END SLIDE 11 -->
+<!-- END SLIDE 12 -->
+<h1 id="thanks-fot-the-attention">THANKS FOT THE ATTENTION</h1>
+<!-- END SLIDE 12 -->
     </body>
     </html>

@@ -1,7 +1,8 @@
-<!--<link rel="stylesheet" href="bootstrap.min.css">-->
+<!-- START HEADER -->
 
-
-<link rel="stylesheet" href="../node_modules/markdown-retro/css/retro.css"> 
+<link rel="stylesheet" href="../node_modules/markdown-retro/css/retro.css">
+<!--<link rel="stylesheet" href="../node_modules/highlight.js/styles/agate.css">-->
+<script src="../node_modules/highlight.js/lib/index.js"></script>
 
 <style>
 
@@ -23,7 +24,9 @@ div.babelTable + table td {
 } 
 </style>
 
-Slide 
+<!-- END HEADER -->
+
+<!-- START SLIDE 1 -->
 
 ## Table Of Content
 - [Table Of Content](#table-of-content)
@@ -44,6 +47,8 @@ Slide
 
 <br>
 <br>
+
+<!-- END SLIDE 1 -->
 
 ## Topics
 
@@ -68,7 +73,7 @@ Slide
 
 --- 
 
-## Slide 1 <!-- omit in toc -->
+<!-- START SLIDE 2 -->
 
 ### JSX - Babel - WebPack <!-- omit in toc -->
 
@@ -79,9 +84,12 @@ Slide
 <br>
 <br>
 
+<!-- END SLIDE 2 -->
+
+
 ---
 
-## Slide 2 <!-- omit in toc -->
+<!-- START SLIDE 3 -->
 
 ### ReactJS - Introduction
 
@@ -94,9 +102,11 @@ Slide
 <br>
 <br>
 
+<!-- END SLIDE 3 -->
+
 ---
 
-## Slide 3 <!-- omit in toc -->
+<!-- START SLIDE 4 -->
 
 ### Structure
 
@@ -113,9 +123,11 @@ Slide
 <br>
 <br>
 
+<!-- END SLIDE 4 -->
+
 ---
 
-## Slide 4 <!-- omit in toc -->
+<!-- START SLIDE 5 -->
 
 ### [Component](https://en.reactjs.org/docs/components-and-props.html)
 
@@ -129,9 +141,11 @@ function Welcome(props) {
 
 Each component is standalone and has its own lifecycle
 
+<!-- END SLIDE 5 -->
+
 ---
 
-## Slide 5 <!-- omit in toc -->
+<!-- START SLIDE 6 -->
 
 ### [LifeCycle](https://en.reactjs.org/docs/state-and-lifecycle.html)
 
@@ -142,8 +156,9 @@ A component’s lifecycle can be broken down into four parts:
 - Updating
 - Unmounting
 
+<!-- END SLIDE 6 -->
 
-## Slide 6 <!-- omit in toc -->
+<!-- START SLIDE 7 -->
 
 #### LifeCycle - [Old Classy Style](https://reactjs.org/docs/components-and-props.html)
 
@@ -166,7 +181,9 @@ class MyComponent extends React.Component {
 }
 ```
 
-## Slide 7 <!-- omit in toc -->
+<!-- END SLIDE 7 -->
+
+<!-- START SLIDE 8 -->
 
 #### LifeCycle - New React v16+ w/[Hooks](https://reactjs.org/docs/hooks-intro.html)
 
@@ -188,8 +205,9 @@ const MyComponent = () => {
   return( /* JSX */)
 }
 ```
+<!-- END SLIDE 8 -->
 
-## Slide 8 <!-- omit in toc -->
+<!-- START SLIDE 9 -->
 
 ### [JSX](https://reactjs.org/docs/jsx-in-depth.html)
 
@@ -208,7 +226,10 @@ const MyComponent = () => {
 |                                          | &nbsp;&nbsp;&nbsp;`'Click Me'`                      |
 |                                          | `)`                                                 |
 
-## Slide 9 <!-- omit in toc -->
+
+<!-- END SLIDE 9 -->
+
+<!-- START SLIDE 10 -->
 
 ### [Babel](https://babeljs.io/docs/en/#babel-is-a-javascript-compiler)
 
@@ -238,7 +259,10 @@ Here are the main things Babel can do for you:
 |                                | &nbsp;&nbsp;&nbsp; `return n + 1;` |
 |                                | `});`                              |
 
-## Slide 10 <!-- omit in toc -->
+<!-- END SLIDE 10 -->
+
+
+<!-- START SLIDE 11 -->
 
 ### [Webpack](https://webpack.js.org/)
 
@@ -312,4 +336,10 @@ module.exports = env => {
 
 ```
 
+<!-- END SLIDE 11 -->
 
+<!-- END SLIDE 12 -->
+
+# THANKS FOT THE ATTENTION
+
+<!-- END SLIDE 12 -->

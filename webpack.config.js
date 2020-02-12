@@ -1,5 +1,6 @@
 const path = require('path')
 const htmlPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = env => {
     return {
@@ -38,7 +39,10 @@ module.exports = env => {
         plugins: [
             new htmlPlugin({
                 template: './src/index.html'
-            })
+            }),
+            new CopyPlugin([
+                { from: 'doc/assets', to: 'public/slides/assets' },
+              ]),
         ],
         watch: true
     }

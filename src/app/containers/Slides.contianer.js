@@ -1,50 +1,82 @@
 import React, { useState, useEffect } from 'react'
-import { withRouter } from 'react-router'
+import { withRouter, Redirect } from 'react-router'
 
 import marked from "marked"
 import { Parser } from 'html-to-react';
 
 import SlidesMD from '../../../doc/planning.md'
+import { loadMDSlides } from '../utils/loadMDSlides';
 
 export const Slides = withRouter((props) => {
-    const [slideHeader, setSlideHeader] = useState("")
-    const [slides, setSlides] = useState([])
+    const [slides, setSlides] = useState({})
 
     useEffect(() => {
-        const _slides = SlidesMD.split('Slide');
-        setSlideHeader(_old => _slides[0])
-        _slides.shift()
-        setSlides(_old => _slides)
-
+        setSlides(_old => loadMDSlides(SlidesMD))
         return () => { }
     }, [])
 
 
-    marked.setOptions({
-        renderer: new marked.Renderer(),
-        highlight: function (code) {
-            return require('highlight.js').highlightAuto(code).value;
-        },
-        pedantic: false,
-        gfm: true,
-        breaks: false,
-        sanitize: false,
-        smartLists: true,
-        smartypants: false,
-        xhtml: false
-    });
-    
-    return (
+    var nextSlide = (
+        slides._slides &&
+        slides._slides.length &&
+        props.match.params.slideNo && 
+        props.match.params.slideNo < slides._slides.length - 1) 
+            ? parseInt(props.match.params.slideNo) + 1 
+            : parseInt(props.match.params.slideNo);
 
-        <section className="mdSection">
-            {
-                slides.map(
-                    slide =>
-                        <article>
-                            { Parser().parse(marked(slideHeader)) }
-                            { Parser().parse(marked(slide))}
-                        </article>)
-            }
-        </section>)
+    var previousSlide = (
+        slides._slides &&
+        slides._slides.length && 
+        props.match.params.slideNo && 
+        parseInt(props.match.params.slideNo) > 0 ) 
+            ? parseInt(props.match.params.slideNo) - 1 
+            : parseInt(props.match.params.slideNo);
+
+    return (
+        (slides && slides._slides) ?
+
+            <section className="mdSection">
+                 
+                {
+                    props.match.params.slideNo && slides._slides[props.match.params.slideNo] ?
+
+                    <div>
+                        {Parser().parse(slides._header)}
+                        {Parser().parse(slides._slides[props.match.params.slideNo])}
+                    </div>
+
+                    :
+
+                    slides._slides.map(
+                       slide =>
+                            <article>
+                                {Parser().parse(slides._header)}
+                                {Parser().parse(slide)}
+                            </article>)
+                }
+
+                {
+                    props.match.params.slideNo && props.match.params.slideNo >  slides._slides.length ?
+                    <Redirect to="/slides/1" />
+                    :
+                    null
+                }
+
+                {
+                    (parseInt(props.match.params.slideNo)) ? 
+                        <button className="btn previous-btn grad" onClick={()=>{props.history.push("/slides/"+ previousSlide)}}><i className="fas fa-angle-left fa-2x"></i></button> 
+                        : null
+                }
+                {
+                    (props.match.params.slideNo < slides._slides.length - 1) ? 
+                    <button className="btn next-btn grad" onClick={()=>{props.history.push("/slides/"+ nextSlide)}}><i className="fas fa-angle-right fa-2x" ></i></button> 
+                        : null
+                }
+                
+                
+            </section>
+            :
+            null
+    )
     //return <div>Slide {props.match.params.slideNo}</div>
 })

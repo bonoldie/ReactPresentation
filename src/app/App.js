@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter,Switch,Route} from 'react-router-dom'
+import {BrowserRouter,Switch,Route, Redirect} from 'react-router-dom'
 import { Homepage } from './containers/Homepage.container'
 import { Slides } from './containers/Slides.contianer'
 
@@ -15,6 +15,10 @@ export const App = () => {
 
                     <Route path="/slides/:slideNo">
                         <Slides />
+                    </Route>
+
+                    <Route path="/slides" exact>
+                        <Redirect to="/slides/1" />
                     </Route>
 
                 </Switch>
