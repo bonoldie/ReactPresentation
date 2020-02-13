@@ -10,7 +10,7 @@ export const App = () => {
                 <Switch>
                     {/* Base route*/}
                     <Route path="/" exact>
-                        <Homepage />
+                        <Redirect to="/slides"  />
                     </Route>
 
                     <Route path="/slides/:slideNo">

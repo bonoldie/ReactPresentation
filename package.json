@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "dev": "webpack-dev-server --env.dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "heroku-postbuild": "npm install --only=dev && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.2",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^1.7.2",
+    "write-file-webpack-plugin": "^4.5.1"
   }
 }

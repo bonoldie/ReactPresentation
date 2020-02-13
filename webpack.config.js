@@ -1,6 +1,7 @@
 const path = require('path')
 const htmlPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin');
+const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = env => {
     return {
@@ -16,6 +17,7 @@ module.exports = env => {
         },
         devServer: {
             historyApiFallback: true,
+            writeToDisk: true
         },
         module: {
             rules: [
@@ -41,9 +43,9 @@ module.exports = env => {
                 template: './src/index.html'
             }),
             new CopyPlugin([
-                { from: 'doc/assets', to: 'public/slides/assets' },
-              ]),
+                { from: './doc/assets', to: './slides/assets/' },
+            ])
         ],
-        watch: true
+        watch: true,
     }
 }

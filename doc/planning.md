@@ -84,7 +84,7 @@ div.babelTable + table td {
 
 <!-- START SLIDE 2 -->
 
-## ReactJS - JSX - Babel - WebPack <!-- omit in toc -->
+## ReactJS - JSX - Babel - Webpack <!-- omit in toc -->
 
 #### The Four Horsemen of Apocalypse <!-- omit in toc -->
 
@@ -308,7 +308,7 @@ React.createElement(
 
 > ### At its core, webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles.
 
-![webpack.png](assets/webpack.png)
+![webpack.png](./assets/webpack.png)
 
 
 ## Setup

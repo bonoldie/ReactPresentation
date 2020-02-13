@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter, Redirect } from 'react-router'
 
-import marked from "marked"
 import { Parser } from 'html-to-react';
 
 import SlidesMD from '../../../doc/planning.md'
