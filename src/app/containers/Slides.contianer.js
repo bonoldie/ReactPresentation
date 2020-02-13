@@ -32,10 +32,26 @@ export const Slides = withRouter((props) => {
             ? parseInt(props.match.params.slideNo) - 1 
             : parseInt(props.match.params.slideNo);
 
+    
+    document.onkeydown =  (e) => {
+        switch (e.keyCode) {
+            // NEXT
+            case 39:
+                props.history.push("/slides/"+ nextSlide)
+                break;
+            // PREVIOUS
+            case 37:
+                props.history.push("/slides/"+ previousSlide)
+                break;
+            default:
+                break;
+        }
+    }
+
     return (
         (slides && slides._slides) ?
 
-            <section className="mdSection">
+            <section className="mdSection" onKeyPress={(e) => {console.log(e)}}>
                  
                 {
                     props.match.params.slideNo && slides._slides[props.match.params.slideNo] ?
@@ -52,7 +68,8 @@ export const Slides = withRouter((props) => {
                             <article>
                                 {Parser().parse(slides._header)}
                                 {Parser().parse(slide)}
-                            </article>)
+                            </article>
+                            )
                 }
 
                 {

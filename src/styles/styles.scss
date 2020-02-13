@@ -4,18 +4,27 @@
 //@import "~highlight.js/styles/agate.css";
 
 pre {
+    font-size: 105%;
     color: white;
-    background-color: rgba(220, 220, 220, 0.05) !important;;
+    background-color: rgba(220, 220, 220, 0.05) !important;
 }
 
-.mdSection{
+pre::-webkit-scrollbar {
+    background-color: rgba(220, 220, 220, 0.1) !important;   
+}
+
+pre::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0,0.2) !important;
+}
+
+.mdSection {
     background-color: #222;
     background: -webkit-linear-gradient(to right, #222, #222);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #222, #222); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
-
 }
 .mdSection div:first-child{
     transition: opacity ;
+    min-height: 100%;
     padding: 30px;
     padding-top:20%;
     padding-bottom:20%;
@@ -25,11 +34,13 @@ pre {
     background: #ff9966 !important;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
-   
 }
 
 body {
-    min-height: 0% !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    max-width: 60rem !important;
+    min-height: 100% !important;
     background: #ff9966 !important;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   

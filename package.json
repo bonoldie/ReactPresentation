@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Bonoldiz/ReactPresentation#readme",
   "dependencies": {
-    "@popperjs/core": "^2.0.4",
+    "@popperjs/core": "^2.0.6",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "html-to-react": "^1.4.2",
@@ -48,8 +48,8 @@
     "raw-loader": "^4.0.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.2",
     "webpack-node-externals": "^1.7.2"
   }

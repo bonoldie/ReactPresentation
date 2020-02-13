@@ -29,21 +29,29 @@ div.babelTable + table td {
 <!-- START SLIDE 1 -->
 
 ## Table Of Content
+
 - [Table Of Content](#table-of-content)
 - [Topics](#topics)
-  - [ReactJS - Introduction](#reactjs---introduction)
-  - [Structure](#structure)
-    - [DOM](#dom)
-    - [VDOM](#vdom)
-  - [Component](#component)
-  - [LifeCycle](#lifecycle)
-    - [LifeCycle - Old Classy Style](#lifecycle---old-classy-style)
-    - [LifeCycle - New React v16+ w/Hooks](#lifecycle---new-react-v16-whooks)
-  - [JSX](#jsx)
-  - [Babel](#babel)
+- [ReactJS - Introduction](#reactjs---introduction)
+- [React is](#react-is)
+- [React isn't](#react-isnt)
+- [Structure](#structure)
+  - [DOM](#dom)
+  - [VDOM](#vdom)
+- [Component](#component)
+  - [Each component is standalone and has its own lifecycle](#each-component-is-standalone-and-has-its-own-lifecycle)
+- [LifeCycle](#lifecycle)
+  - [A component’s lifecycle can be broken down into four parts:](#a-components-lifecycle-can-be-broken-down-into-four-parts)
+- [LifeCycle - Old Classy Style](#lifecycle---old-classy-style)
+- [LifeCycle - New React v16+ w/Hooks](#lifecycle---new-react-v16-whooks)
+- [JSX](#jsx)
+    - [*Its used in both Class and functional component.*](#its-used-in-both-class-and-functional-component)
+- [Babel](#babel)
+  - [Here are the main things Babel can do for you:](#here-are-the-main-things-babel-can-do-for-you)
   - [Webpack](#webpack)
     - [Webpack - Introduction](#webpack---introduction)
     - [Setup](#setup)
+- [THANKS FOR THE ATTENTION](#thanks-for-the-attention)
 
 <br>
 <br>
@@ -75,7 +83,7 @@ div.babelTable + table td {
 
 <!-- START SLIDE 2 -->
 
-### JSX - Babel - WebPack <!-- omit in toc -->
+## ReactJS - JSX - Babel - WebPack <!-- omit in toc -->
 
 #### The Four Horsemen of Apocalypse <!-- omit in toc -->
 
@@ -86,19 +94,24 @@ div.babelTable + table td {
 
 <!-- END SLIDE 2 -->
 
-
 ---
 
 <!-- START SLIDE 3 -->
 
-### ReactJS - Introduction
+## ReactJS - Introduction 
 
-|         React is          |    React isn't    |
-| :-----------------------: | :---------------: |
-|   an OpenSource library   |    a framework    |
-|   Developed by Facebook   | a standalone tool |
-|   a Design tool for UIs   |                   |
-| a component based library |
+## React is
+
+>  - ### an OpenSource library
+>  - ### Developed by Facebook
+>  - ### a Design tool for UIs
+>  - ### a component based library
+
+## React isn't
+
+>  - ### a framework
+>  - ### a standalone tool
+
 <br>
 <br>
 
@@ -108,17 +121,17 @@ div.babelTable + table td {
 
 <!-- START SLIDE 4 -->
 
-### Structure
+## Structure
 
-#### DOM
+### DOM
 
-> The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an XML or HTML document as a tree structure wherein each node is an object representing a part of the document.
+> ### The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an XML or HTML document as a tree structure wherein each node is an object representing a part of the document.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1200px-DOM-model.svg.png" width="400">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1200px-DOM-model.svg.png" width="600" />
 
-#### VDOM
+### VDOM
 
-> The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM.
+> ### The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM.
 
 <br>
 <br>
@@ -129,17 +142,17 @@ div.babelTable + table td {
 
 <!-- START SLIDE 5 -->
 
-### [Component](https://en.reactjs.org/docs/components-and-props.html)
+## [Component](https://en.reactjs.org/docs/components-and-props.html)
 
-> Split the UI into independent, reusable pieces, and think about each piece in isolation.
+> ### Split the UI into independent, reusable pieces, and think about each piece in isolation.
 
 ```js
 function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+ return <h1>Hello, {props.name}</h1>;
 }
 ```
 
-Each component is standalone and has its own lifecycle
+### Each component is standalone and has its own lifecycle
 
 <!-- END SLIDE 5 -->
 
@@ -147,20 +160,20 @@ Each component is standalone and has its own lifecycle
 
 <!-- START SLIDE 6 -->
 
-### [LifeCycle](https://en.reactjs.org/docs/state-and-lifecycle.html)
+## [LifeCycle](https://en.reactjs.org/docs/state-and-lifecycle.html)
 
-A component’s lifecycle can be broken down into four parts:
+### A component’s lifecycle can be broken down into four parts:
 
-- Initialization
-- Mounting
-- Updating
-- Unmounting
+- ### Initialization
+- ### Mounting
+- ### Updating
+- ### Unmounting
 
 <!-- END SLIDE 6 -->
 
 <!-- START SLIDE 7 -->
 
-#### LifeCycle - [Old Classy Style](https://reactjs.org/docs/components-and-props.html)
+## LifeCycle - [Old Classy Style](https://reactjs.org/docs/components-and-props.html)
 
 ```js
 class MyComponent extends React.Component {
@@ -185,7 +198,7 @@ class MyComponent extends React.Component {
 
 <!-- START SLIDE 8 -->
 
-#### LifeCycle - New React v16+ w/[Hooks](https://reactjs.org/docs/hooks-intro.html)
+## LifeCycle - New React v16+ w/[Hooks](https://reactjs.org/docs/hooks-intro.html)
 
 ```js
 /* the Initialization is the method itself */
@@ -209,31 +222,45 @@ const MyComponent = () => {
 
 <!-- START SLIDE 9 -->
 
-### [JSX](https://reactjs.org/docs/jsx-in-depth.html)
+## [JSX](https://reactjs.org/docs/jsx-in-depth.html)
 
-> JSX is a **syntax extension** to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called “React elements”.  
-*Its used in both Class or functional component.*
+> ### JSX is a **syntax extension** to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called “React elements”.  
+#### *Its used in both Class and functional component.*
 
-> Uses camelCase property naming convention instead of HTML attribute names.
+<hr />
 
-<div class="babelTable"></div>
+> ### Uses camelCase property naming convention instead of HTML attribute names.
 
-| JSX Code                                 | React compile into...                               |
-| ---------------------------------------- | --------------------------------------------------- |
-| `<MyButton color="blue" shadowSize={2}>` | `React.createElement(`                              |
-| &nbsp;&nbsp;&nbsp;`Click Me`             | &nbsp;&nbsp;&nbsp;`MyButton,`                       |
-| `</MyButton>`                            | &nbsp;&nbsp;&nbsp;`{color: 'blue', shadowSize: 2},` |
-|                                          | &nbsp;&nbsp;&nbsp;`'Click Me'`                      |
-|                                          | `)`                                                 |
+<hr />
 
+> ### JSX Code
+
+```js
+<MyButton color="blue" shadowSize={2}>  
+  Click Me
+</MyButton>
+```
+
+<hr />
+
+> ### React compile into...  
+
+
+```js
+React.createElement(
+  MyButton,
+  {color: 'blue', shadowSize: 2},
+  'Click Me'
+)
+```
 
 <!-- END SLIDE 9 -->
 
 <!-- START SLIDE 10 -->
 
-### [Babel](https://babeljs.io/docs/en/#babel-is-a-javascript-compiler)
+## [Babel](https://babeljs.io/docs/en/#babel-is-a-javascript-compiler)
 
->   Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. 
+>  ### Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. 
 
 ```json
 /* COMMON BABEL CONFIG FILE */
@@ -246,18 +273,28 @@ const MyComponent = () => {
 }
 ```
 
-Here are the main things Babel can do for you:
-- **Transform syntax**
-- *Polyfill features that are missing in your target environment (through @babel/polyfill)*
-- Source code transformations (codemods)
+### Here are the main things Babel can do for you:
+- ### **Transform syntax**
+- ### *Polyfill features that are missing in your target environment (through @babel/polyfill)*
+- ### Source code transformations (codemods)
 
-<div class="babelTable"></div>
+<hr />
 
-| Source Code                    | Babel transformation               |
-| ------------------------------ | ---------------------------------- |
-| `[1, 2, 3].map((n) => n + 1);` | `[1, 2, 3].map(function(n) {`      |
-|                                | &nbsp;&nbsp;&nbsp; `return n + 1;` |
-|                                | `});`                              |
+> ### Source Code 
+
+```js
+[1, 2, 3].map((n) => n + 1);
+```
+
+<hr />
+
+> ### Babel transformation  
+
+```js
+[1, 2, 3].map(function(n) {
+  return n + 1;
+});
+```
 
 <!-- END SLIDE 10 -->
 
@@ -340,6 +377,6 @@ module.exports = env => {
 
 <!-- END SLIDE 12 -->
 
-# THANKS FOT THE ATTENTION
+## THANKS FOR THE ATTENTION
 
 <!-- END SLIDE 12 -->
