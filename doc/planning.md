@@ -1,8 +1,8 @@
 <!-- START HEADER -->
 
-<link rel="stylesheet" href="../node_modules/markdown-retro/css/retro.css">
-<!--<link rel="stylesheet" href="../node_modules/highlight.js/styles/agate.css">-->
-<script src="../node_modules/highlight.js/lib/index.js"></script>
+<link rel="stylesheet" href="./assets/retro.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 
 <style>
 
