@@ -1,7 +1,6 @@
 const path = require('path')
 const htmlPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin');
-const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = env => {
     return {
@@ -46,6 +45,6 @@ module.exports = env => {
                 { from: './doc/assets', to: './slides/assets/' },
             ])
         ],
-        watch: true,
+        watch: env && env.dev
     }
 }
