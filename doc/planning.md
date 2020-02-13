@@ -48,9 +48,10 @@ div.babelTable + table td {
     - [*Its used in both Class and functional component.*](#its-used-in-both-class-and-functional-component)
 - [Babel](#babel)
   - [Here are the main things Babel can do for you:](#here-are-the-main-things-babel-can-do-for-you)
-  - [Webpack](#webpack)
-    - [Webpack - Introduction](#webpack---introduction)
-    - [Setup](#setup)
+- [Webpack](#webpack)
+  - [Webpack - Introduction](#webpack---introduction)
+- [Setup](#setup)
+  - [Webpack runs on node and it can be installed via npm](#webpack-runs-on-node-and-it-can-be-installed-via-npm)
 - [THANKS FOR THE ATTENTION](#thanks-for-the-attention)
 
 <br>
@@ -301,18 +302,18 @@ React.createElement(
 
 <!-- START SLIDE 11 -->
 
-### [Webpack](https://webpack.js.org/)
+## [Webpack](https://webpack.js.org/)
 
-#### Webpack - Introduction
+### Webpack - Introduction
 
-> At its core, webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles.
+> ### At its core, webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles.
 
 ![webpack.png](assets/webpack.png)
 
 
-#### Setup
+## Setup
 
-Webpack runs on node and it can be installed via npm
+### Webpack runs on node and it can be installed via npm
 
 ```bash  
 npm install --save webpack /* webpack-cli webpack-dev-server */
