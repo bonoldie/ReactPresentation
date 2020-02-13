@@ -102,7 +102,7 @@ html {
   }
 }
 
-body {
+.md-container {
   line-height: 1.85;
 }
 
@@ -174,7 +174,7 @@ textarea {
 }
 
 html,
-body {
+.md-container {
   background-color: #222;
   min-height: 100%;
 }
@@ -183,12 +183,16 @@ html {
   font-size: 18px;
 }
 
-body {
+.md-container {
   color: #fafafa;
   font-family: "Courier New";
   line-height: 1.45;
   margin: 6rem auto 1rem;
-  max-width: 48rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  max-width: 60rem;
+  min-height: 100%;
+  background-color: #222;
 }
 
 pre {
