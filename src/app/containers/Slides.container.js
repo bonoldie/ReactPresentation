@@ -62,10 +62,10 @@ export const Slides = (props) => {
                         :
 
                         <div>
+                            {Parser().parse(slides._header)}
                             {slides._slides.map(
                                 slide =>
                                     <article>
-                                        {Parser().parse(slides._header)}
                                         {Parser().parse(slide)}
                                     </article>
                             )}

@@ -31,7 +31,6 @@ div.babelTable + table td {
 ## Table Of Content
 
 - [Table Of Content](#table-of-content)
-- [Topics](#topics)
 - [ReactJS - Introduction](#reactjs---introduction)
 - [React is](#react-is)
 - [React isn't](#react-isnt)
@@ -59,7 +58,7 @@ div.babelTable + table td {
 
 <!-- END SLIDE 1 -->
 
-## Topics
+## Topics <!-- omit in toc -->
 
 - [ ] ReactJs
   - [x] Introduction
