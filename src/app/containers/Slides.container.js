@@ -11,7 +11,10 @@ export const Slides = (props) => {
 
     useEffect(() => {
         setSlides(_old => loadMDSlides(SlidesMD))
-        return () => { }
+        
+        return () => {
+            document.onkeydown = () => {}
+        }
     }, [])
 
     var nextSlide = (
@@ -48,51 +51,51 @@ export const Slides = (props) => {
 
     return (
         (slides && slides._slides) ?
-        <div className="md-container">
-            <section className="md-section">
-                    
-                {
-                    props.match.params.slideNo && slides._slides[props.match.params.slideNo] ?
+            <div className="md-container">
+                <section className="md-section">
 
-                        <div>
-                            {Parser().parse(slides._header)}
-                            {Parser().parse(slides._slides[props.match.params.slideNo])}
-                        </div>
+                    {
+                        props.match.params.slideNo && slides._slides[props.match.params.slideNo] ?
 
-                        :
+                            <div>
+                                {Parser().parse(slides._header)}
+                                {Parser().parse(slides._slides[props.match.params.slideNo])}
+                            </div>
 
-                        <div>
-                            {Parser().parse(slides._header)}
-                            {slides._slides.map(
-                                slide =>
-                                    <article>
-                                        {Parser().parse(slide)}
-                                    </article>
-                            )}
-                        </div>
-                }
+                            :
 
-                {
-                    props.match.params.slideNo && props.match.params.slideNo > slides._slides.length ?
-                        <Redirect to="/slides/1" />
-                        :
-                        null
-                }
+                            <div>
+                                {Parser().parse(slides._header)}
+                                {slides._slides.map(
+                                    slide =>
+                                        <article>
+                                            {Parser().parse(slide)}
+                                        </article>
+                                )}
+                            </div>
+                    }
 
-                {
-                    (parseInt(props.match.params.slideNo)) ?
-                        <button className="btn previous-btn grad" onClick={() => { props.history.push("/slides/" + previousSlide) }}><i className="fas fa-angle-left fa-2x"></i></button>
-                        : null
-                }
-                {
-                    (props.match.params.slideNo < slides._slides.length - 1) ?
-                        <button className="btn next-btn grad" onClick={() => { props.history.push("/slides/" + nextSlide) }}><i className="fas fa-angle-right fa-2x" ></i></button>
-                        : null
-                }
+                    {
+                        props.match.params.slideNo && props.match.params.slideNo > slides._slides.length ?
+                            <Redirect to="/slides/1" />
+                            :
+                            null
+                    }
+
+                    {
+                        (parseInt(props.match.params.slideNo)) ?
+                            <button className="btn previous-btn grad" onClick={() => { props.history.push("/slides/" + previousSlide) }}><i className="fas fa-angle-left fa-2x"></i></button>
+                            : null
+                    }
+                    {
+                        (props.match.params.slideNo < slides._slides.length - 1) ?
+                            <button className="btn next-btn grad" onClick={() => { props.history.push("/slides/" + nextSlide) }}><i className="fas fa-angle-right fa-2x" ></i></button>
+                            : null
+                    }
 
 
-            </section>
-        </div>
+                </section>
+            </div>
             :
             null
     )

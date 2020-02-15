@@ -26,10 +26,12 @@
     "html-to-react": "^1.4.2",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
+    "prismjs": "^1.19.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
+    "react-simple-code-editor": "^0.11.0",
     "serve": "^11.3.0"
   },
   "devDependencies": {

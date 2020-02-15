@@ -17,7 +17,7 @@ export const App = () => {
                         <button className="btn btn-slides-swap position-fixed grad font-weight-bold" 
                             onClick={
                                 () => 
-                                (history.location.pathname.includes('examples')) ? history.push('/slides') : history.push('/examples') 
+                                (history.location.pathname.includes('examples')) ? history.goBack() : history.push('/examples') 
                             }>  SWITCH <i className="fas fa-angle-right" ></i>
                         </button>
                         :
