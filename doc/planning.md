@@ -38,20 +38,11 @@ div.babelTable + table td {
   - [DOM](#dom)
   - [VDOM](#vdom)
 - [Component](#component)
-  - [Each component is standalone and has its own lifecycle](#each-component-is-standalone-and-has-its-own-lifecycle)
 - [LifeCycle](#lifecycle)
-  - [A component’s lifecycle can be broken down into four parts:](#a-components-lifecycle-can-be-broken-down-into-four-parts)
-- [LifeCycle - Old Classy Style](#lifecycle---old-classy-style)
-- [LifeCycle - New React v16+ w/Hooks](#lifecycle---new-react-v16-whooks)
+  - [LifeCycle - Old Classy Style](#lifecycle---old-classy-style)
+  - [LifeCycle - New React v16+ w/Hooks](#lifecycle---new-react-v16-whooks)
 - [JSX](#jsx)
-    - [*Its used in both Class and functional component.*](#its-used-in-both-class-and-functional-component)
-- [Babel](#babel)
-  - [Here are the main things Babel can do for you:](#here-are-the-main-things-babel-can-do-for-you)
 - [Webpack](#webpack)
-  - [Webpack - Introduction](#webpack---introduction)
-- [Setup](#setup)
-  - [Webpack runs on node and it can be installed via npm](#webpack-runs-on-node-and-it-can-be-installed-via-npm)
-- [THANKS FOR THE ATTENTION](#thanks-for-the-attention)
 
 <br>
 <br>
@@ -147,12 +138,17 @@ div.babelTable + table td {
 > ### Split the UI into independent, reusable pieces, and think about each piece in isolation.
 
 ```js
-function Welcome(props) {
- return <h1>Hello, {props.name}</h1>;
-}
+const Welcome = props => <h1>Hello, {props.name}</h1>
 ```
 
-### Each component is standalone and has its own lifecycle
+### Each component is standalone and has its own lifecycle  <!-- omit in toc -->
+
+> ### Than render the component with the ReactDOM library
+
+```js
+ReactDOM.render(<Welcome name="World"/>,document.getElemenetById('root'))
+```
+ 
 
 <!-- END SLIDE 5 -->
 
@@ -162,7 +158,7 @@ function Welcome(props) {
 
 ## [LifeCycle](https://en.reactjs.org/docs/state-and-lifecycle.html)
 
-### A component’s lifecycle can be broken down into four parts:
+### A component’s lifecycle can be broken down into four parts:  <!-- omit in toc -->
 
 - ### Initialization
 - ### Mounting
@@ -173,7 +169,7 @@ function Welcome(props) {
 
 <!-- START SLIDE 7 -->
 
-## LifeCycle - [Old Classy Style](https://reactjs.org/docs/components-and-props.html)
+### LifeCycle - [Old Classy Style](https://reactjs.org/docs/components-and-props.html)
 
 ```js
 class MyComponent extends React.Component {
@@ -198,7 +194,7 @@ class MyComponent extends React.Component {
 
 <!-- START SLIDE 8 -->
 
-## LifeCycle - New React v16+ w/[Hooks](https://reactjs.org/docs/hooks-intro.html)
+### LifeCycle - New React v16+ w/[Hooks](https://reactjs.org/docs/hooks-intro.html)
 
 ```js
 /* the Initialization is the method itself */
@@ -225,7 +221,7 @@ const MyComponent = () => {
 ## [JSX](https://reactjs.org/docs/jsx-in-depth.html)
 
 > ### JSX is a **syntax extension** to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called “React elements”.  
-#### *Its used in both Class and functional component.*
+#### *Its used in both Class and functional component.*  <!-- omit in toc -->
 
 <hr />
 
@@ -258,7 +254,7 @@ React.createElement(
 
 <!-- START SLIDE 10 -->
 
-## [Babel](https://babeljs.io/docs/en/#babel-is-a-javascript-compiler)
+## [Babel](https://babeljs.io/docs/en/#babel-is-a-javascript-compiler)  <!-- omit in toc -->
 
 >  ### Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. 
 
@@ -273,7 +269,7 @@ React.createElement(
 }
 ```
 
-### Here are the main things Babel can do for you:
+### Here are the main things Babel can do for you:  <!-- omit in toc -->
 - ### **Transform syntax**
 - ### *Polyfill features that are missing in your target environment (through @babel/polyfill)*
 - ### Source code transformations (codemods)
@@ -298,21 +294,52 @@ React.createElement(
 
 <!-- END SLIDE 10 -->
 
+<!-- START SLIDE 11 -->
+
+## Babel Example <!-- omit in toc -->
+
+> ### with ES6
+  
+```js
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+
+> ### without ES6
+ 
+```js
+var createReactClass = require('create-react-class');
+var Greeting = createReactClass({
+  render: function() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+});
+```
 
 <!-- START SLIDE 11 -->
 
+
+
+<!-- START SLIDE 12 -->
+
 ## [Webpack](https://webpack.js.org/)
 
-### Webpack - Introduction
+### Webpack - Introduction  <!-- omit in toc -->
 
 > ### At its core, webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles.
 
 ![webpack.png](./assets/webpack.png)
 
+<!-- END SLIDE 12 -->
 
-## Setup
+<!-- START SLIDE 13 -->
 
-### Webpack runs on node and it can be installed via npm
+## Setup  <!-- omit in toc -->
+
+### Webpack runs on node and it can be installed via npm  <!-- omit in toc -->
 
 ```bash  
 npm install --save webpack /* webpack-cli webpack-dev-server */
@@ -373,10 +400,10 @@ module.exports = env => {
 
 ```
 
-<!-- END SLIDE 11 -->
+<!-- END SLIDE 13 -->
 
-<!-- END SLIDE 12 -->
+<!-- START SLIDE 14 -->
 
-## THANKS FOR THE ATTENTION
+## THANKS FOR THE ATTENTION  <!-- omit in toc -->
 
-<!-- END SLIDE 12 -->
+<!-- END SLIDE 14 -->
