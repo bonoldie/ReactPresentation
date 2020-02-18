@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { withRouter, Redirect } from 'react-router'
+import { Redirect } from 'react-router'
 
 import { Parser } from 'html-to-react';
 

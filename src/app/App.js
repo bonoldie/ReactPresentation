@@ -7,17 +7,17 @@ import { Examples } from './containers/Examples.container'
 
 export const App = () => {
     const history = createBrowserHistory();
-
+    
     return (
         <div className="container-fluid">
             <Router history={history}>
 
                 {
-                    history && history.location  ?
-                        <button className="btn btn-slides-swap position-fixed grad font-weight-bold" 
+                    history && history.location ?
+                        <button className="btn btn-slides-swap position-fixed grad font-weight-bold"
                             onClick={
-                                () => 
-                                (history.location.pathname.includes('examples')) ? history.goBack() : history.push('/examples') 
+                                () =>
+                                    (history.location.pathname.includes('examples')) ? history.goBack() : history.push('/examples')
                             }>  SWITCH <i className="fas fa-angle-right" ></i>
                         </button>
                         :
