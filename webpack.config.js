@@ -20,7 +20,6 @@ module.exports = env => {
         },
         module: {
             rules: [
-                //{ test: /\.(png|jpe?g|gif)$/i, use: 'file-loader'},
                 { test: /\.(md)/, use: "raw-loader" },
                 { test: /\.(js)|.(jsx)$/, use: 'babel-loader' },
                 { test: /\.css$/, use: ['style-loader', 'css-loader'] },

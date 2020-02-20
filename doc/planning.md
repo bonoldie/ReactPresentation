@@ -349,11 +349,15 @@ npm install --save webpack /* webpack-cli webpack-dev-server */
 /* MY CURRENT CONFIGURATION (webpack.config.js)*/
 
 const path = require('path')
-const webpack = require('webpack')
 const htmlPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = env => {
     return {
+        // IGNORING NODE MODULES AND NATIVE CODE
+        target: 'web',
+
+        // CONFIGS
         entry: './src/index.js',
         output: {
             path: path.resolve(__dirname, 'dist'),
@@ -362,18 +366,14 @@ module.exports = env => {
         },
         devServer: {
             historyApiFallback: true,
-          },
-        /*
-          THIS IS VERY IMPORTANT 
-
-          Here the files that match the regex are loaded with the related loader
-        */
-
+            writeToDisk: true
+        },
         module: {
             rules: [
+                { test: /\.(md)/, use: "raw-loader" },
                 { test: /\.(js)|.(jsx)$/, use: 'babel-loader' },
                 { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-                { test: /\.s[ac]ss$/i, use: ['style-loader', 'css-loader', 'sass-loader',] },
+                { test: /\.s[ac]ss$/, use: ['style-loader', 'css-loader', 'sass-loader',] },
                 {
                     test: /\.(woff(2)?|ttf|eot|svg|png)(\?v=\d+\.\d+\.\d+)?$/,
                     use: [{
@@ -385,16 +385,16 @@ module.exports = env => {
                 }
             ]
         },
-        /* THE BUILD ENV */
         mode: (env && env.dev) ? "development" : "production",
-        /* SOME PLUGINS FOR OUR APP */
         plugins: [
             new htmlPlugin({
                 template: './src/index.html'
-            })
+            }),
+            new CopyPlugin([
+                { from: './doc/assets', to: './slides/assets/' },
+            ])
         ],
-        /* HMR */
-        watch: true
+        watch: env && env.dev
     }
 }
 
@@ -405,5 +405,11 @@ module.exports = env => {
 <!-- START SLIDE 14 -->
 
 ## THANKS FOR THE ATTENTION  <!-- omit in toc -->
+
+--- 
+
+> ### FIRST OF ALL DO EXERCISES...
+> #### then
+> ### WANT SOMETHING MORE? Try <a href="https://github.com/Bonoldiz/react-boilerplate" target="_blank">this</a>
 
 <!-- END SLIDE 14 -->

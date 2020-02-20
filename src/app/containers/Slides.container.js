@@ -99,5 +99,4 @@ export const Slides = (props) => {
             :
             null
     )
-    //return <div>Slide {props.match.params.slideNo}</div>
 }

@@ -10,6 +10,8 @@ export const Examples = () => {
                 <Example value={{title:"CLASS VS FUNCTIONAL COMPONENT",penID:"vYOKrpN",show:"js,result"}}/>
 
                 <Example value={{title:"LIFECYCLE",penID:"qBdNKMW",show:"js"}}/>
+
+                <Example value={{title:"GET THE HANDS-ON",penID:"zYGKjeE",show:"js,result"}}/>
             </div>
         </div>
     )
