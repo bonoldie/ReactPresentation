@@ -6,7 +6,6 @@
 
 <style>
 
-
 .vscode-light pre {
     background-color: rgba(220, 220, 220, 0.05) !important;
 }
