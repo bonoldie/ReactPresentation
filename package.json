@@ -21,7 +21,7 @@
   "homepage": "https://github.com/Bonoldiz/ReactPresentation#readme",
   "dependencies": {
     "@popperjs/core": "^2.0.6",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "html-to-react": "^1.4.2",
     "jquery": "^3.4.1",
